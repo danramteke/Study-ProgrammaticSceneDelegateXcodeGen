@@ -1,0 +1,43 @@
+name: Xcgsde
+options:
+  bundleIdPrefix: com.danramteke
+settings:
+  CLANG_CXX_LANGUAGE_STANDARD: "gnu++17"
+targets:
+  Xcgsde:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.2"
+    sources: [Xcgsde]
+    settings:
+      base:
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_STYLE: Automatic
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: "1.0"
+        DEVELOPMENT_TEAM: ABCTEFGEIS
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UILaunchStoryboardName: LaunchScreen
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+  XcgsdeTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "15.2"
+    sources: [XcgsdeTests]
+    dependencies:
+      - target: Xcgsde
+    info:
+      path: XcgsdeTests/Info.plist
+      properties: {}
+  XcgsdeUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "15.2"
+    sources: [XcgsdeUITests]
+    dependencies:
+      - target: Xcgsde
+    info:
+      path: XcgsdeUITests/Info.plist
+      properties: {}
